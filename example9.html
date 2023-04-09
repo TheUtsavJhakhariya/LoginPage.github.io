@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+       *{
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+           font-family: 'Raleway', sans-serif;
+       }
+       body{
+           background: linear-gradient(90deg, #ffba08,#f48c06);
+       }
+       .container{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           min-height: 100vh;
+       }
+       .screen{
+           background: linear-gradient(90deg, #000000,#6a040f);
+           position: relative;
+           height: 600px;
+           width: 360px;
+           box-shadow: 0px 0px 24px #000000;
+       }
+       .screen_content{
+           z-index: 1;
+           position: relative;
+           height: 100%;
+       }
+       .screen_background{
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           z-index: 0;
+           -webkit-clip-path: inset (0 0 0 0);
+           clip-path: inset(0 0 0 0);
+       }
+       .screen_background_shape{
+           transform: rotate(45deg);
+           position: absolute;
+       }
+       .screen_background_shape1{
+           height: 520px;
+           width: 520px;
+           background: rgb(255, 255, 255);
+           top: -50px;
+           right: 120px;
+           border-radius: 0 72px 0 0;
+       }
+       .screen_background_shape2{
+           height: 220px;
+           width: 220px;
+           background: #f48c06;
+           top: -172px;
+           right: 0px;
+           border-radius: 32px;
+       }
+       .screen_background_shape3{
+           height: 540px;
+           width: 190px;
+           background: linear-gradient(270deg,#da431d,#b92500);
+           top: -24px;
+           right: 0px;
+           border-radius: 32px;
+       }
+       .screen_background_shape4{
+           height: 400px;
+           width: 200px;
+           background: #f48c06;
+           top: 420px;
+           right: 50px;
+           border-radius: 60px;
+       }
+       .login{
+           width: 320px;
+           padding: 30px;
+           padding-top: 156px;
+       }
+       .login_field{
+           padding: 20px 0px;
+           position: relative;
+       }
+       .login_icon{
+           position: absolute;
+           top: 30px;
+           color: #787585;
+       }
+       .login_input{
+           border: none;
+           border-bottom: 2px solid #d1d1d4;
+           background: none;
+           padding: 10px;
+           padding-left: 24px;
+           font-weight: 700;
+           width: 75%;
+           transition: 0.2s;
+       }
+       .login_input:active,
+       .login_input:focus,
+       .login_input:hover{
+           outline: none;
+           border-bottom-color: #000000;
+       }
+       .login_submit{
+           background: #fff;
+           font-size: 14px;
+           margin-top: 30px;
+           padding: 16px 20px;
+           border-radius: 26px;
+           border: 1px solid #6a040f;
+           text-transform: uppercase;
+           font-weight: 700;
+           display: flex;
+           align-items: center;
+           width: 100%;
+           color: #6a040f;
+           box-shadow: 0px 2px 2px #6a040f;
+           cursor: pointer;
+           transition: 0.2s;
+       }
+       .login_submit:active,
+       .login_submit:focus,
+       .login_submit:hover{
+           border-color: #ffffff;
+           outline: none;
+       }
+       .button_icon{
+           font-size: 24px;
+           margin-left: auto;
+           color: #ffffff;
+       }
+       .social-login{
+           position: absolute;
+           height: 140px;
+           width: 160px;
+           text-align: center;
+           bottom: 0px;
+           right: 0px;
+           color: #fff;
+       }
+       .social-icons{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+       }
+       .social-login_icon{
+           padding: 20px 10px;
+           color: #fff;
+           text-decoration: none;
+           
+       }
+       .social-login_icon:hover{
+           transform: scale(1.5);
+           text-shadow: 0px 0px 8px #000000;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen_content">
+                <form class="login">
+                    <div class="login_field">
+                        <i class="login_icon fas fa-user"></i>
+                        <input type="text" class="login_input" placeholder="User name/ Email">
+                    </div>
+                    <div class="login_field">
+                        <i class="login_icon fas fa-lock"></i>
+                        <input type="password" class="login_input" placeholder="Password">
+                    </div>
+                    <button class="button login_submit">
+                        <span class="button_text">Log in Now</span>
+                        <i class="button_icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+                <div class="social-login">
+                    <h3>Log in via</h3>
+                    <div class="social-icon">
+                        <a href="#" class="social-login_icon fab fa-instagram"></a>
+                        <a href="#" class="social-login_icon fab fa-facebook"></a>
+                        <a href="#" class="social-login_icon fab fa-twitter"></a>
+                    </div>
+                </div>
+            </div> 
+            <div class="screen_background">
+                <span class="screen_background_shape screen_background_shape4"></span>
+                <span class="screen_background_shape screen_background_shape3"></span>
+                <span class="screen_background_shape screen_background_shape2"></span>
+                <span class="screen_background_shape screen_background_shape1"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
